@@ -10,13 +10,9 @@ body {
 }
 
 :root {
-  --color-bg1: rgb(0, 0, 0);
-  --color-bg2: rgb(65, 0, 0);
-  --color1: 253, 67, 118;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 225;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
+  --color-bg1: rgb(32, 18, 18);
+  --color-bg2: rgb(8, 0, 0);
+  --color1: 253, 67, 118; /* Other circles */
   --color-interactive: 201, 0, 19; /*Nice Red Color, Color of heart*/
   --circle-size: 55%;
   --blending: color-burn;
@@ -94,7 +90,7 @@ body {
   }
 
   .gradients-container {
-    filter: url(#goo) blur(40px);
+    filter: url(#goo) blur(100px);
     width: 100%;
     height: 100%;
   }
