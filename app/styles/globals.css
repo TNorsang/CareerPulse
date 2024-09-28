@@ -88,6 +88,8 @@ body {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
     opacity: 1;
   }
 
@@ -104,6 +106,8 @@ body {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
     opacity: 1;
   }
   .g3 {
@@ -119,6 +123,8 @@ body {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2 + 200px);
     left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
     opacity: 1;
   }
   .g4 {
@@ -134,6 +140,8 @@ body {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
     opacity: 1;
   }
   .g5 {
@@ -149,6 +157,8 @@ body {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
     opacity: 1;
   }
 }
