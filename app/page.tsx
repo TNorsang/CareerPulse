@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 
 export default function Home() {
   const bubbleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     let curX = 0;
     let curY = 0;
@@ -18,7 +19,7 @@ export default function Home() {
       if (bubbleRef.current) {
         bubbleRef.current.style.transform = `translate(${Math.round(
           curX
-        )}px, ${Math.round(curY)}px)`;
+        )}px, ${Math.round(curY)}px)`; // Apply translate only
       }
 
       requestAnimationFrame(move);
@@ -64,7 +65,9 @@ export default function Home() {
         <div className="g3"> </div>
         <div className="g4"> </div>
         <div className="g5"> </div>
-        <div className="interactive" ref={bubbleRef}></div>
+        <div className="interactive" ref={bubbleRef}>
+          <div className="heartbeat"></div>
+        </div>
       </div>
     </div>
   );

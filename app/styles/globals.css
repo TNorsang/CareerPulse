@@ -10,16 +10,38 @@ body {
 }
 
 :root {
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
-  --color1: 18, 113, 255;
+  --color-bg1: rgb(0, 0, 0);
+  --color-bg2: rgb(65, 0, 0);
+  --color1: 253, 67, 118;
   --color2: 221, 74, 255;
   --color3: 100, 220, 225;
   --color4: 200, 50, 50;
   --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 60%;
-  --blending: hard-light;
+  --color-interactive: 201, 0, 19; /*Nice Red Color, Color of heart*/
+  --circle-size: 55%;
+  --blending: color-burn;
+}
+
+/*Heart beat keyframes*/
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+  40% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes moveInCircle {
@@ -62,7 +84,8 @@ body {
   height: 100vh;
   position: absolute;
   overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  /* Page Linear Gradient Background */
+  background: linear-gradient(180deg, var(--color-bg1), var(--color-bg2));
   top: 0;
   left: 0;
 
@@ -164,18 +187,21 @@ body {
   }
   .interactive {
     position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color-interactive), 0.8) 0,
-        rgba(var(--color-interactive), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
     width: 100%;
     height: 100%;
     top: -50%;
     left: -50%;
-
-    opacity: 0.7;
+  }
+  .heartbeat {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color-interactive), 0.8) 0,
+        rgba(var(--color-interactive), 0) 25%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+    animation: heartBeat 2s ease-in-out infinite;
   }
 }
