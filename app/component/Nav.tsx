@@ -1,7 +1,7 @@
 export default function Nav() {
   return (
-    <div>
-      <h1>Career Pulse</h1>
+    <div className="flex justify-center">
+      <h1 className="text-white text-4xl">Career Pulse</h1>
     </div>
   );
 }

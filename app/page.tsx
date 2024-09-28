@@ -2,6 +2,7 @@
 
 import "./styles/globals.css";
 import React, { useEffect, useRef } from "react";
+import Nav from "./component/Nav";
 
 export default function Home() {
   const bubbleRef = useRef<HTMLDivElement>(null);
@@ -59,6 +60,9 @@ export default function Home() {
           </filter>
         </defs>
       </svg>
+      <div>
+        <Nav />
+      </div>
       <div className="gradients-container">
         <div className="g1"> </div>
         <div className="g2"> </div>
