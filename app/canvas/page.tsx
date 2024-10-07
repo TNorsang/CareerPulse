@@ -27,9 +27,8 @@ export default function Canvas() {
         }
         const data: User[] = await response.json();
         setUsers(data);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error(err);
-        setError(err.message);
       }
     };
 
@@ -71,9 +70,8 @@ export default function Canvas() {
       setUsername(""); // Clear the input field
       setJobStatus(false); // Reset the checkbox
       setError(null); // Clear any previous errors
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setError(err.message);
     }
   };
 
